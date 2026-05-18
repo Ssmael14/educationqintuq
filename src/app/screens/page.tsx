@@ -8,6 +8,10 @@ import { LessonsLibrary, UnitDetail, VoicesList, SpeakerDetail, VocabLibrary } f
 import { ManifestoScreen, VoicesDirectory, ShareableCard } from "@/components/kintuq/screens-cultural";
 import { DashboardDesktop, DailyWordDesktop, LessonDesktop } from "@/components/kintuq/screens-desktop";
 import { DashboardCentered, LessonCentered, DailyWordCentered } from "@/components/kintuq/screens-centered";
+import { SplashScreen, OnboardWelcome, OnboardMotivation, OnboardGoal, OnboardNotifications, SignInScreen } from "@/components/kintuq/screens-onboarding";
+import { AchievementUnlocked, StreakCalendar, Paywall, StreakInJeopardy } from "@/components/kintuq/screens-moments";
+import { PronunciationDeep, StoryMode, LessonMatching, LessonType, LessonStory } from "@/components/kintuq/screens-lessons-extra";
+import { SettingsScreen } from "@/components/kintuq/screens-settings";
 
 function Artboard({ label, width, height, scale = 1, children }: { label: string; width: number; height: number; scale?: number; children: ReactNode }) {
   return (
@@ -55,6 +59,15 @@ export default function ScreensGallery() {
         </div>
       </div>
 
+      <Section title="Onboarding & Auth" subtitle="First-run flow + sign-in">
+        <Artboard label="01 · Splash" width={W} height={844}><SplashScreen lang={lang} /></Artboard>
+        <Artboard label="02 · Welcome" width={W} height={900}><OnboardWelcome lang={lang} /></Artboard>
+        <Artboard label="03 · Why are you learning?" width={W} height={920}><OnboardMotivation lang={lang} /></Artboard>
+        <Artboard label="04 · Daily goal" width={W} height={920}><OnboardGoal lang={lang} /></Artboard>
+        <Artboard label="05 · Notifications" width={W} height={1020}><OnboardNotifications lang={lang} /></Artboard>
+        <Artboard label="06 · Sign in" width={W} height={1000}><SignInScreen lang={lang} /></Artboard>
+      </Section>
+
       <Section title="Core app" subtitle="Dashboard, lesson, daily word, completion, profile">
         <Artboard label="07 · Dashboard" width={W} height={1100}><Dashboard lang={lang} /></Artboard>
         <Artboard label="08 · Lesson (listen)" width={W} height={900}><LessonScreen lang={lang} /></Artboard>
@@ -71,7 +84,23 @@ export default function ScreensGallery() {
         <Artboard label="16 · Vocabulary library" width={W} height={1080}><VocabLibrary lang={lang} /></Artboard>
       </Section>
 
-      <Section title="Cultural depth & social" subtitle="Manifesto, voices directory, shareables">
+      <Section title="System & moments" subtitle="Settings, celebrations, paywall">
+        <Artboard label="17 · Settings" width={W} height={1400}><SettingsScreen lang={lang} /></Artboard>
+        <Artboard label="18 · Achievement unlocked" width={W} height={900}><AchievementUnlocked lang={lang} /></Artboard>
+        <Artboard label="19 · Streak calendar" width={W} height={1080}><StreakCalendar lang={lang} /></Artboard>
+        <Artboard label="20 · Paywall" width={W} height={1100}><Paywall lang={lang} /></Artboard>
+        <Artboard label="21 · Streak in jeopardy" width={W} height={920}><StreakInJeopardy lang={lang} /></Artboard>
+      </Section>
+
+      <Section title="Lesson variants" subtitle="Matching, type, story comprehension, pronunciation">
+        <Artboard label="28 · Matching pairs" width={W} height={900}><LessonMatching lang={lang} /></Artboard>
+        <Artboard label="29 · Type the answer" width={W} height={900}><LessonType lang={lang} /></Artboard>
+        <Artboard label="30 · Story comprehension" width={W} height={900}><LessonStory lang={lang} /></Artboard>
+        <Artboard label="31 · Pronunciation deep" width={W} height={1000}><PronunciationDeep lang={lang} /></Artboard>
+      </Section>
+
+      <Section title="Cultural depth & social" subtitle="Story mode, manifesto, voices directory, shareables">
+        <Artboard label="32 · Story mode" width={W} height={1100}><StoryMode lang={lang} /></Artboard>
         <Artboard label="33 · Manifesto" width={W} height={1200}><ManifestoScreen lang={lang} /></Artboard>
         <Artboard label="34 · Voices directory" width={W} height={1200}><VoicesDirectory lang={lang} /></Artboard>
         <Artboard label="35 · Shareable card" width={W} height={900}><ShareableCard lang={lang} /></Artboard>
